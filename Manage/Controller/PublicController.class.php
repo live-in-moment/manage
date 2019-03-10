@@ -85,7 +85,7 @@ class PublicController extends Controller
 //        if ($rst !== false)
 //        {
             // 2 用户名检测逻辑
-            $userMap['user_name'] = array('EQ', ($this->post['username']));
+            $userMap['username'] = ['EQ', $this->post['username']];
 
             $staffInfo = $staffModel->getOneStaffInfo($userMap);
 
@@ -123,6 +123,7 @@ class PublicController extends Controller
 
                             // session存权限
                             // 用户名密码正确，存重要信息于session
+                            session(null);
                             $data = $staffModel->getOneStaffDetailedInfo(['s.id' => ['eq', $staffInfo['id']]]);
                             session('staffId', $data['id']);
                             session('nickname', $data['name']);
@@ -161,7 +162,6 @@ class PublicController extends Controller
     */
     public function login()
     {
-//        var_dump(phpinfo());die;
         $this->display('login');
     }
 

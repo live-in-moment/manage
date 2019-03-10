@@ -20,7 +20,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label" id="oldInput">原手机号码：</label>
                             <div class="col-sm-4">
-                                <input id="oldPhone" name="oldPhone" class="form-control" type="text" readonly value="{$data.phone}">
+                                <input id="oldPhone" name="oldPhone" class="form-control" type="text" readonly value="{$data.mobilephone}">
                             </div>
                         </div>
                         <div class="form-group">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-8 col-sm-offset-3">
-                                <button class="btn btn-primary" type="button" id="eidtPhoneSubmit">提交</button>
+                                <button class="btn btn-primary" type="button" id="editPhoneSubmit">提交</button>
                             </div>
                         </div>
                     </form>
@@ -45,12 +45,11 @@
 <script src="__PUBLIC__/html/js/manage/WdatePicker.js"></script>
 <script src="__PUBLIC__/html/js/plugins/layer/layer.js"></script>
 <script>
-    $("#eidtPhoneSubmit").on('click', function () {
-        $('#eidtPhoneSubmit').attr('disabled', 'disabled');
+    $("#editPhoneSubmit").on('click', function () {
+        $('#editPhoneSubmit').attr('disabled', 'disabled');
         var newphone = $("#newPhone").val();
-        console.log(newphone);
         if (newphone == "") {
-            $('#eidtPhoneSubmit').attr('disabled', false);
+            $('#editPhoneSubmit').attr('disabled', false);
             layer.alert('新的电话不能为空');
             return false;
         }
@@ -60,9 +59,9 @@
             data : {
                 newphone : newphone
             },
-            success : function (msg) {
-                if (msg == 2) {
-                    layer.msg('修改成功',
+            success : function (res) {
+                if (res.status == 200) {
+                    layer.msg(res.msg,
                         {
                             icon : 6,
                             time : 500
@@ -72,8 +71,8 @@
                         }
                     );
                 } else {
-                    layer.alert("修改失败");
-                    $('#eidtPhoneSubmit').attr('disabled', false);
+                    layer.alert(res.msg);
+                    $('#editPhoneSubmit').attr('disabled', false);
                 }
             }
         });

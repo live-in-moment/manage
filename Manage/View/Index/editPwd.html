@@ -150,10 +150,9 @@
             data : {
                 oldpwd : oldPwd
             },
-            success : function (msg) {
-                console.log(msg);
-                if (msg == 1) {
-                    layer.msg("原密码输入错误！",
+            success : function (res) {
+                if (res.status == 400) {
+                    layer.msg(res.msg,
                     {
                         icon: 5,
                         time : 500
@@ -163,7 +162,7 @@
                     });
                     return false;
                 }
-                if (msg == 2) {
+                if (res.status == 200) {
                     var indexLoad = layer.load(1,'修改中', {shade : [0.1, '#fff']});
                     $.ajax({
                         type : 'POST',
@@ -171,10 +170,10 @@
                         data : {
                             newpwd : newPwd
                         },
-                        success : function (msg1) {
+                        success : function (result) {
                             layer.close(indexLoad);
-                            if (msg1 == 2) {
-                                layer.msg('修改成功，重新登录吧！',
+                            if (result.status == 200) {
+                                layer.msg(result.msg,
                                     {
                                         icon : 6,
                                         time : 500
@@ -183,7 +182,7 @@
                                     window.parent.location.href = "__MODULE__/Public/login";
                                 });
                             } else {
-                                layer.alert("修改失败");
+                                layer.alert(result.msg);
                             }
                         },
                         error : function (error) {
