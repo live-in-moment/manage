@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM HOME</title>
+    <link rel="shortcut icon" href="__PUBLIC__/favicon.ico">
+    <include file="./manage/View/header.html" />
+    <style type="text/css">
+        body{
+            color:black;
+        }
+        .ibox-content{
+            background-color: #CCCCCC;
+            font-size:1.2em;
+        }
+        .text {
+            font-size: 14px;
+        }
+
+        .item {
+            margin-bottom: 18px;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: "";
+        }
+        .clearfix:after {
+            clear: both
+        }
+        tr {
+            height: 49px;
+        }
+        
+    </style>
+</head>
+<div id="app">
+    <br>
+    <br>
+    <el-row :gutter="21">
+        <el-col :span="6" :offset="1">
+            <el-card>
+                <div slot="header" class="clearfix">
+                    <span>{{firstCardName}}</span>
+                </div>
+                <table class="table table-border table-hover table-striped addTable_name text item">
+                    <tr v-for="(item,index) in firstCard">
+                        <td>{{item.name}}</td>
+                        <td>
+                            <el-badge v-model="item.num" style="float: right" v-if="item.name != ''">
+                                <el-button size="small" @click="auditList(item.url, item.name, item.num)">审核</el-button>
+                            </el-badge>
+                        </td>
+                    </tr>
+                </table>
+            </el-card>
+        </el-col>
+        <el-col :span="6" :offset="1">
+            <el-card>
+                <div slot="header" class="clearfix">
+                    <span>{{secondCardName}}</span>
+                </div>
+                <table class="table table-border table-hover table-striped addTable_name text item">
+                    <tr v-for="(item,index) in secondCard">
+                        <td>{{item.name}}</td>
+                        <td>
+                            <el-badge v-model="item.num" style="float: right" v-if="item.name != ''">
+                                <el-button size="small" @click="auditList(item.url, item.name, item.num)">审核</el-button>
+                            </el-badge>
+                        </td>
+                    </tr>
+                </table>
+            </el-card>
+        </el-col>
+        <el-col :span="6" :offset="1">
+            <el-card>
+                <div slot="header" class="clearfix">
+                    <span>{{thirdCardName}}</span>
+                </div>
+                <table class="table table-border table-hover table-striped addTable_name text item">
+                    <tr v-for="(item,index) in thirdCard">
+                        <td>{{item.name}}</td>
+                        <td>
+                            <el-badge v-model="item.num" style="float: right" v-if="item.name != ''">
+                                <el-button size="small" @click="auditList(item.url, item.name, item.num)">审核</el-button>
+                            </el-badge>
+                        </td>
+                    </tr>
+                </table>
+            </el-card>
+        </el-col>
+    </el-row>
+    <br>
+    <br>
+    <el-row :gutter="21">
+        <el-col :span="6" :offset="1">
+            <el-card>
+                <div slot="header" class="clearfix">
+                    <span>{{forthCardName}}</span>
+                </div>
+                <table class="table table-border table-hover table-striped addTable_name text item">
+                    <tr v-for="(item,index) in forthCard">
+                        <td>{{item.name}}</td>
+                        <td>
+                            <el-badge v-model="item.num" style="float: right" v-if="item.name != ''">
+                                <el-button size="small" @click="auditList(item.url, item.name, item.num)">审核</el-button>
+                            </el-badge>
+                        </td>
+                    </tr>
+                </table>
+            </el-card>
+        </el-col>
+        <el-col :span="6" :offset="1">
+            <el-card>
+                <div slot="header" class="clearfix">
+                    <span>{{fifthCardName}}</span>
+                </div>
+                <table class="table table-border table-hover table-striped addTable_name text item">
+                    <tr v-for="(item,index) in fifthCard">
+                        <td>{{item.name}}</td>
+                        <td>
+                            <el-badge v-model="item.num" style="float: right" v-if="item.name != ''">
+                                <el-button size="small" @click="auditList(item.url, item.name, item.num)">审核</el-button>
+                            </el-badge>
+                        </td>
+                    </tr>
+                </table>
+            </el-card>
+        </el-col>
+    </el-row>
+
+
+
+</div>
+<include file="./manage/View/footer.html" />
+
+<script>
+    var vm = new Vue({
+        el : '#app',
+        data : function () {
+            return {
+                firstCardName:'',
+                firstCard : [],
+
+                secondCardName:'',
+                secondCard : [],
+
+                thirdCardName:'',
+                thirdCard : [],
+
+                forthCardName:'',
+                forthCard : [],
+
+                fifthCardName:'',
+                fifthCard : [],
+            }
+        },
+        created:function () {
+            getData()
+        },
+        methods:{
+            auditList: function(url, title, num) {
+                if (url == ''){
+                    return
+                }
+                if (num == 0 || num == ''){
+                    layer.msg("当前没有可审核数据");
+                    return
+                }
+
+                // var index = layer.open({
+                //     type: 2,
+                //     title: '湖南迪文有限公司' + title,
+                //     content: url,
+                //     area: ['90%', '90%'],
+                //     shadeClose:true,
+                //     end: function () {
+                //         getData()
+                //     }
+                // })
+
+                creatIframe(url,title);
+                min_titleList();
+            }
+        }
+    });
+    function getData() {
+        $.post('/manage/Index/getOperationNum', {} , function (res) {
+            if(res.status == 200){
+                vm.firstCard = res.data.firstCard
+                vm.firstCardName = res.data.firstCardName
+
+                vm.secondCard = res.data.secondCard
+                vm.secondCardName = res.data.secondCardName
+
+                vm.thirdCard = res.data.thirdCard
+                vm.thirdCardName = res.data.thirdCardName
+
+                vm.forthCard = res.data.forthCard
+                vm.forthCardName = res.data.forthCardName
+                //
+                vm.fifthCard = res.data.fifthCard
+                vm.fifthCardName = res.data.fifthCardName
+
+                setTimeout("getData();",15000)
+            }
+        })
+    }
+    function creatIframe(href,titleName){
+        var topWindow=$(window.parent.document),
+            show_nav=topWindow.find('#min_title_list'),
+            iframe_box=topWindow.find('#iframe_box'),
+            iframeBox=iframe_box.find('.show_iframe'),
+            $tabNav = topWindow.find(".acrossTab"),
+            $tabNavWp = topWindow.find(".Hui-tabNav-wp"),
+            $tabNavmore =topWindow.find(".Hui-tabNav-more");
+        var taballwidth=0;
+
+        show_nav.find('li').removeClass("active");
+        show_nav.append('<li class="active"><span data-href="'+href+'">'+titleName+'</span><i></i><em></em></li>');
+        if('function'==typeof $('#min_title_list li').contextMenu){
+            $("#min_title_list li").contextMenu('Huiadminmenu', {
+                bindings: {
+                    'closethis': function(t) {
+                        var $t = $(t);
+                        if($t.find("i")){
+                            $t.find("i").trigger("click");
+                        }
+                    },
+                    'closeall': function(t) {
+                        $("#min_title_list li i").trigger("click");
+                    },
+                }
+            });
+        }else {
+
+        }
+        var $tabNavitem = topWindow.find(".acrossTab li");
+        if (!$tabNav[0]){return}
+        $tabNavitem.each(function(index, element) {
+            taballwidth+=Number(parseFloat($(this).width()+60))
+        });
+        $tabNav.width(taballwidth+25);
+        var w = $tabNavWp.width();
+        if(taballwidth+25>w){
+            $tabNavmore.show()}
+        else{
+            $tabNavmore.hide();
+            $tabNav.css({left:0})
+        }
+        iframeBox.hide();
+        iframe_box.append('<div class="show_iframe"><div class="loading"></div><iframe frameborder="0" src='+href+'></iframe></div>');
+        var showBox=iframe_box.find('.show_iframe:visible');
+        showBox.find('iframe').load(function(){
+            showBox.find('.loading').hide();
+        });
+    }
+    function min_titleList(){
+        var topWindow = $(window.parent.document),
+            show_nav = topWindow.find("#min_title_list"),
+            aLi = show_nav.find("li");
+    }
+</script>
+</html>

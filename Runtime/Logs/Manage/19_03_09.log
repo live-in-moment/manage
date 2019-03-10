@@ -1,0 +1,97 @@
+[ 2019-03-09T17:19:51+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:21:11+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:30:44+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:30:46+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:31:16+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:31:17+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:33:58+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:33:59+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:34:35+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T17:34:36+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T18:03:07+08:00 ] 127.0.0.1 /manage/index/index
+ERR: SQLSTATE[HY000] [1049] Unknown database 'manage'
+
+[ 2019-03-09T21:21:50+08:00 ] 127.0.0.1 /manage/index/index
+ERR: SQLSTATE[HY000] [1049] Unknown database 'manage'
+
+[ 2019-03-09T21:21:50+08:00 ] 127.0.0.1 /manage/index/index
+ERR: SQLSTATE[HY000] [1049] Unknown database 'manage'
+
+[ 2019-03-09T22:24:28+08:00 ] 127.0.0.1 /manage/index/index
+ERR: 1054:Unknown column 'p.role_name' in 'field list'
+ [ SQL语句 ] : SELECT crm_staff.name nickname,d.name dept_name,p.role_name post_name FROM `crm_staff` LEFT JOIN `crm_dept` d ON d.id = crm_staff.dept_id LEFT JOIN `crm_post` p ON p.id = crm_staff.post_id  WHERE crm_staff.id = 0 LIMIT 1  
+
+[ 2019-03-09T22:26:29+08:00 ] 127.0.0.1 /manage/index/crmhome
+ERR: 非法操作:crmhome
+
+[ 2019-03-09T22:26:45+08:00 ] 127.0.0.1 /Manage/resume/showBusinessList
+ERR: 无法加载控制器:Resume
+
+[ 2019-03-09T22:27:26+08:00 ] 127.0.0.1 /manage/index/crmhome
+ERR: 非法操作:crmhome
+
+[ 2019-03-09T22:29:14+08:00 ] 127.0.0.1 /manage/index/manage/index/home
+ERR: 非法操作:manage
+
+[ 2019-03-09T22:36:07+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:12+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.4757997569999215
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:12+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.6145599090685083
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:12+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.4376493192184252
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:13+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.22897587333200686
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:13+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.32529629479060373
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:13+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.4038624832083675
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:13+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.32312994013347596
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:14+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.5391432940350378
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:14+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.5624511648226145
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:36:14+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.5748737560705317
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T22:48:12+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T23:21:14+08:00 ] 127.0.0.1 /Manage/Public/captcha
+ERR: Call to undefined function Think\imagettftext()
+
+[ 2019-03-09T23:21:16+08:00 ] 127.0.0.1 /Manage/Public/captcha/t/0.00025302626726086963
+ERR: Call to undefined function Think\imagettftext()
+

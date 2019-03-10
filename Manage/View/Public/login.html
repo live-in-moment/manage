@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MANAGE CRM Login</title>
+    <link rel="shortcut icon" href="__PUBLIC__/favicon.ico">
+    <include file="./manage/View/header.html" />
+    <style>
+        h1.logo-name{color:#00a0e9;font-size:130px;font-weight:300;letter-spacing:-10px;margin-bottom:0}
+        .footer {
+            position: absolute;
+            bottom:0;
+            left:0;
+            padding-right: 0!important;
+            margin-right: 0!important;
+            text-align: center;
+            width:100%;}
+        .gohome{
+            display:none!important;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+                <h1 class="logo-name">MANAGE</h1>
+            </div>
+            <h3>欢迎使用 MANAGE ERP</h3>
+
+            <form class="m-t" role="form" id="loginForm" name="forms">
+                <div class="form-group">
+                    <input id="firstname" name="username" class="form-control" type="text" placeholder="用户名">
+                </div>
+		        <div class="form-group">
+                    <span id=box><input id="password" name="password" class="form-control" type="password" placeholder="密码" style="width: 75%;margin-bottom: 18px; float: left;"></span>
+                    <span style="float: left;" id= 'click'><a href="javascript:showps()">显示密码</a></span>
+                </div>
+                <!--<div class="form-group">-->
+                        <!--<input id="captcha" name="captcha" maxlength="4" class="form-control" style="width: 50%; height:34px;float: left;">-->
+                        <!--<img style="float: left;margin-left: 10px;" src="__CONTROLLER__/captcha" onclick="this.src='__CONTROLLER__/captcha/t/'+Math.random()" />-->
+                <!--</div>-->
+                <button class="btn btn-primary block full-width m-b"  style="background-color: #00a0e9;" type="button" id="userLogin">登录</button>
+            </form>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <div class="pull-center">&emsp;ERP version2.1.2 &copy; 2018-2019 版权所有
+            <a href="http://www.dwin.com.cn" target="_blank">北京迪文科技有限公司</a>
+            <a href="http://www.miitbeian.gov.cn" target="_blank">京ICP备05033781号-4</a>
+        </div>
+    </div>
+</footer>
+<include file="./manage/View/footer.html" />
+<script type="text/javascript">
+/*    $("body").jParticle({
+        background: "#141414",
+        color: "#E6E6E6"
+    });*/
+  function showps(){
+        if (this.forms.password.type="password") {
+
+            document.getElementById("box").innerHTML="<input id=\"password\" name=\"password\" class=\"form-control\" type=\"text\" placeholder=\"密码\" style=\"width: 75%;margin-bottom: 18px; float: left;\" value="+this.forms.password.value+">";
+            document.getElementById("click").innerHTML="<a href=\"javascript:hideps()\">隐藏密码</a>"
+        }
+    }
+    function hideps(){
+        if (this.forms.password.type="text") {
+            document.getElementById("box").innerHTML="<input id=\"password\" name=\"password\" class=\"form-control\" type=\"password\" placeholder=\"密码\" style=\"width: 75%;margin-bottom: 18px; float: left;\" value="+this.forms.password.value+">";
+            document.getElementById("click").innerHTML="<a href=\"javascript:showps()\">显示密码</a>"
+        }
+    }
+
+    $(document).keyup(function(event){
+        if(event.keyCode == 13){
+            $("#userLogin").trigger("click");
+        }
+    });
+    function checkPost ()
+    {
+        if (!loginForm.username.value)
+        {
+             layer.alert("请填写用户名！",
+                { icon : 5 }
+            );
+            return false;
+
+        }
+        if (!loginForm.password.value)
+        {
+            layer.alert("请输入密码",
+                { icon : 5 }
+            );
+            return false;
+        }
+        // if (!loginForm.captcha.value)
+        // {
+        //     layer.alert("你的验证码呢",
+        //         { icon : 5 }
+        //     );
+        //     return false;
+        // }
+        return true;
+    }
+    $("#userLogin").on('click', function () {
+        $("#userLogin").attr("disabled","disabled");
+        $("#loginForm").attr('disabled',"disabled");
+        var rst = checkPost();
+        if (rst == false) {
+            $("#userLogin").attr("disabled",false);
+            return false;
+        }
+        var indexLoad = layer.load(1, {shade : [0.1, '#fff']});
+        $.ajax({
+            type : 'POST',
+            url  : '__CONTROLLER__/loginOk',
+            data : $("#loginForm").serializeArray(),
+            success : function (res) {
+                layer.close(indexLoad);
+                if (res.status == 200) {
+                    window.location.href = "__MODULE__/crm";
+                } else {
+                    layer.msg(res.msg)
+                }
+            },
+            error : function (error) {
+                layer.close(indexLoad);
+                $("#userLogin").attr("disabled", false);
+            }
+        });
+    });
+</script>
+</html>

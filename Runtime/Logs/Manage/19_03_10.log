@@ -1,0 +1,59 @@
+[ 2019-03-10T14:09:42+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: captcha /Users/chendongdong/Documents/workspace/manage/Manage/Controller/PublicController.class.php 第 82 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0008s ]
+ERR: Think\Model:getOneStaffInfo方法不存在！
+
+[ 2019-03-10T15:16:39+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1052:Column 'id' in where clause is ambiguous
+ [ SQL语句 ] : SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE `id` = '1' LIMIT 1  
+ERR: 1052:Column 'id' in where clause is ambiguous
+ [ SQL语句 ] : SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE `id` = '1' LIMIT 1  
+
+[ 2019-03-10T15:17:48+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552202268',`error_count`='0' WHERE `id` = '1' [ RunTime:0.0076s ]
+SQL: show full fields from crm_staff [ RunTime:0.0008s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":null,"login_addr":null,"login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 15:10:37"}]',
+                                    '[{"login_addr":"127.0.0.1","last_login_time":1552202268,"id":["eq","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 15:10:37"}]',
+                                    1552202268
+                                ); [ RunTime:0.0043s ]
+
