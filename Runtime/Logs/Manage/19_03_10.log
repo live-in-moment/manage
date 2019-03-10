@@ -57,3 +57,553 @@ SQL: INSERT INTO `manage`.`crm_table_log` (
                                     1552202268
                                 ); [ RunTime:0.0043s ]
 
+[ 2019-03-10T16:48:41+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0024s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552207721',`error_count`='0' WHERE `id` = '1' [ RunTime:0.0044s ]
+SQL: show full fields from crm_staff [ RunTime:0.0004s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552202268","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 15:17:48"}]',
+                                    '[{"last_login_time":1552207721,"id":["eq","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 15:17:48"}]',
+                                    1552207721
+                                ); [ RunTime:0.0091s ]
+
+[ 2019-03-10T16:48:46+08:00 ] 127.0.0.1 /Manage/resume/showBusinessList
+ERR: 无法加载控制器:Resume
+
+[ 2019-03-10T18:33:00+08:00 ] 127.0.0.1 /Manage/resume/showBusinessList
+ERR: 无法加载控制器:Resume
+
+[ 2019-03-10T19:36:09+08:00 ] 127.0.0.1 /Manage/Index/editPhone
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0003s ]
+SQL: UPDATE `crm_staff` SET `mobilephone`='13120295802' WHERE `id` = '1' [ RunTime:0.0100s ]
+SQL: show full fields from crm_staff [ RunTime:0.0005s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Index/editPhone',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552207721","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 16:48:41"}]',
+                                    '[{"mobilephone":"13120295802","id":["EQ","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552207721","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 16:48:41"}]',
+                                    1552217769
+                                ); [ RunTime:0.0107s ]
+
+[ 2019-03-10T19:36:16+08:00 ] 127.0.0.1 /Manage/Index/editPhone
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0003s ]
+SQL: UPDATE `crm_staff` SET `mobilephone`='13120295801' WHERE `id` = '1' [ RunTime:0.0110s ]
+SQL: show full fields from crm_staff [ RunTime:0.0008s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Index/editPhone',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","mobilephone":"13120295802","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552207721","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:36:09"}]',
+                                    '[{"mobilephone":"13120295801","id":["EQ","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552207721","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:36:09"}]',
+                                    1552217776
+                                ); [ RunTime:0.0104s ]
+
+[ 2019-03-10T19:37:46+08:00 ] 127.0.0.1 /Manage/Index/checkPwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T19:37:53+08:00 ] 127.0.0.1 /Manage/Index/checkPwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T19:37:55+08:00 ] 127.0.0.1 /Manage/Index/checkPwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T19:38:03+08:00 ] 127.0.0.1 /Manage/Index/checkPwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T19:38:03+08:00 ] 127.0.0.1 /Manage/Index/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+ERR: Call to undefined function Manage\Controller\mcrypt_create_iv()
+
+[ 2019-03-10T19:39:16+08:00 ] 127.0.0.1 /Manage/Index/checkPwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T19:39:18+08:00 ] 127.0.0.1 /Manage/Index/checkPwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-03-10T19:39:50+08:00 ] 127.0.0.1 /Manage/Index/checkPwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-03-10T19:39:50+08:00 ] 127.0.0.1 /Manage/Index/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+ERR: Call to undefined function Manage\Controller\mcrypt_create_iv()
+
+[ 2019-03-10T19:46:11+08:00 ] 127.0.0.1 /Manage/Index/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [8192] Methods with the same name as their class will not be constructors in a future version of PHP; SphinxClient has a deprecated constructor /Users/chendongdong/Documents/workspace/manage/Manage/Controller/sphinxapi.php 第 378 行.
+NOTIC: [8192] password_hash(): Use of the 'salt' option to password_hash is deprecated /Users/chendongdong/Documents/workspace/manage/Manage/Controller/IndexController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0003s ]
+SQL: UPDATE `crm_staff` SET `pwd`='$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n/5Ir20vk52.' WHERE `id` = '1' [ RunTime:0.0042s ]
+SQL: show full fields from crm_staff [ RunTime:0.0006s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Index/changePwd',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552207721","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:36:16"}]',
+                                    '[{"pwd":"$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n\/5Ir20vk52.","id":["EQ","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552207721","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:36:16"}]',
+                                    1552218371
+                                ); [ RunTime:0.0071s ]
+
+[ 2019-03-10T19:46:44+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552218404',`error_count`='1' WHERE `id` = '1' [ RunTime:0.0128s ]
+SQL: show full fields from crm_staff [ RunTime:0.0007s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+
+[ 2019-03-10T19:48:58+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '1' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552218538',`error_count`='0' WHERE `id` = '1' [ RunTime:0.0122s ]
+SQL: show full fields from crm_staff [ RunTime:0.0006s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n\/5Ir20vk52.","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552218404","login_addr":"127.0.0.1","login_status":"1","error_count":"1","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:46:44"}]',
+                                    '[{"last_login_time":1552218538,"error_count":0,"id":["eq","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n\/5Ir20vk52.","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","login_addr":"127.0.0.1","login_status":"1","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:46:44"}]',
+                                    1552218538
+                                ); [ RunTime:0.0094s ]
+
+[ 2019-03-10T19:50:05+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552218605',`error_count`='0' WHERE `id` = '1' [ RunTime:0.0145s ]
+SQL: show full fields from crm_staff [ RunTime:0.0006s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n\/5Ir20vk52.","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552218538","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:48:58"}]',
+                                    '[{"last_login_time":1552218605,"id":["eq","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n\/5Ir20vk52.","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:48:58"}]',
+                                    1552218605
+                                ); [ RunTime:0.0151s ]
+
+[ 2019-03-10T19:53:02+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '1'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552218782',`error_count`='0' WHERE `id` = '1' [ RunTime:0.0143s ]
+SQL: show full fields from crm_staff [ RunTime:0.0007s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    1,
+                                    '陈冬冬',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '1',
+                                    '[{"id":"1","name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n\/5Ir20vk52.","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","last_login_time":"1552218605","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:50:05"}]',
+                                    '[{"last_login_time":1552218782,"id":["eq","1"],"name":"陈冬冬","username":"chen","mail":"chendongdong_ok@163.com","pwd":"$2y$12$UlF6T0ZZTmZJNHlLVTcyMOSK0QCVBqxMpDwEa8Ss4n\/5Ir20vk52.","identity_no":"360502199510073617","mobilephone":"13120295801","birthday":"1995-10-07","post_id":"1","dept_id":"1","type":"3","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 14:00:44","update_time":"2019-03-10 19:50:05"}]',
+                                    1552218782
+                                ); [ RunTime:0.0135s ]
+
+[ 2019-03-10T19:54:06+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-03-10T19:55:09+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T19:55:50+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T19:56:32+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+
+[ 2019-03-10T19:57:59+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '2'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552219079',`error_count`='1' WHERE `id` = '2' [ RunTime:0.0086s ]
+SQL: show full fields from crm_staff [ RunTime:0.0007s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+
+[ 2019-03-10T19:58:12+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '2'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552219092',`error_count`='0' WHERE `id` = '2' [ RunTime:0.0064s ]
+SQL: show full fields from crm_staff [ RunTime:0.0008s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    2,
+                                    '朱斐瑶',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '2',
+                                    '[{"id":"2","name":"朱斐瑶","username":"zhu","mail":"zfyyy@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":null,"mobilephone":null,"birthday":null,"post_id":"2","dept_id":"2","type":"3","last_login_time":"1552219079","login_addr":"127.0.0.1","login_status":"1","error_count":"1","create_time":"2019-03-10 16:46:29","update_time":"2019-03-10 19:57:59"}]',
+                                    '[{"last_login_time":1552219092,"error_count":0,"id":["eq","2"],"name":"朱斐瑶","username":"zhu","mail":"zfyyy@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":null,"mobilephone":null,"birthday":null,"post_id":"2","dept_id":"2","type":"3","login_addr":"127.0.0.1","login_status":"1","create_time":"2019-03-10 16:46:29","update_time":"2019-03-10 19:57:59"}]',
+                                    1552219092
+                                ); [ RunTime:0.0090s ]
+
+[ 2019-03-10T19:58:28+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '2'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552219108',`error_count`='0' WHERE `id` = '2' [ RunTime:0.0129s ]
+SQL: show full fields from crm_staff [ RunTime:0.0013s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    2,
+                                    '朱斐瑶',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '2',
+                                    '[{"id":"2","name":"朱斐瑶","username":"zhu","mail":"zfyyy@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":null,"mobilephone":null,"birthday":null,"post_id":"2","dept_id":"2","type":"3","last_login_time":"1552219092","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 16:46:29","update_time":"2019-03-10 19:58:12"}]',
+                                    '[{"last_login_time":1552219108,"id":["eq","2"],"name":"朱斐瑶","username":"zhu","mail":"zfyyy@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":null,"mobilephone":null,"birthday":null,"post_id":"2","dept_id":"2","type":"3","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 16:46:29","update_time":"2019-03-10 19:58:12"}]',
+                                    1552219108
+                                ); [ RunTime:0.0087s ]
+
+[ 2019-03-10T19:58:50+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-03-10T19:59:54+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '2' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-03-10T20:00:53+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '2' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-03-10T20:01:17+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '2' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-03-10T20:01:39+08:00 ] 127.0.0.1 /Manage/Public/loginOk
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `crm_staff` WHERE `username` = 'zhu' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT s.*,d.name dept_name,p.name post_name FROM crm_staff s LEFT JOIN `crm_dept` d ON d.id = s.dept_id LEFT JOIN `crm_post` p ON p.id = s.post_id  WHERE s.id = '2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `crm_staff` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `crm_staff` WHERE `id` = '2'  [ RunTime:0.0002s ]
+SQL: UPDATE `crm_staff` SET `login_addr`='127.0.0.1',`last_login_time`='1552219299',`error_count`='0' WHERE `id` = '2' [ RunTime:0.0097s ]
+SQL: show full fields from crm_staff [ RunTime:0.0007s ]
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+NOTIC: [8] Array to string conversion /Users/chendongdong/Documents/workspace/manage/ThinkPHP/Library/Think/Model.class.php 第 593 行.
+SQL: INSERT INTO `manage`.`crm_table_log` (
+                                `staff_id`,
+                                `staff_name`,
+                                `path`,
+                                `table_name`,
+                                `comment`,
+                                `type`,
+                                `major_key`,
+                                `before_data`,
+                                `now_data`,
+                                `create_time`
+                            )
+                            VALUES
+                                (
+                                    2,
+                                    '朱斐瑶',
+                                    'Public/loginOk',
+                                    'crm_staff',
+                                    '{"id":"","name":"员工姓名","username":"登陆账号 - 默认公司邮箱","mail":"邮箱","pwd":"密码","identity_no":"身份证号","mobilephone":"手机号","birthday":"生日日期","post_id":"职位ID","dept_id":"部门ID","type":"1-实习生 2-试用期  3-正式员工 4-离职 ","last_login_time":"最后登陆时间","login_addr":"最后登陆地址","login_status":"账户状态 1-正常 2-锁定","error_count":"密码错误次数","create_time":"创建时间","update_time":"更新时间"}',
+                                    2,
+                                    '2',
+                                    '[{"id":"2","name":"朱斐瑶","username":"zhu","mail":"zfyyy@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":null,"mobilephone":null,"birthday":null,"post_id":"2","dept_id":"2","type":"3","last_login_time":"1552219108","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 16:46:29","update_time":"2019-03-10 19:58:28"}]',
+                                    '[{"last_login_time":1552219299,"id":["eq","2"],"name":"朱斐瑶","username":"zhu","mail":"zfyyy@163.com","pwd":"$2y$10$NoRj5mCbFuoqJfYWCZpJde7.02VsD8wVTeTHQm2AKeP4SnzxNyq0i","identity_no":null,"mobilephone":null,"birthday":null,"post_id":"2","dept_id":"2","type":"3","login_addr":"127.0.0.1","login_status":"1","error_count":"0","create_time":"2019-03-10 16:46:29","update_time":"2019-03-10 19:58:28"}]',
+                                    1552219299
+                                ); [ RunTime:0.0098s ]
+

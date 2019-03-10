@@ -167,6 +167,7 @@
                     window.location.href = "/Manage/crm";
                 } else {
                     layer.msg(res.msg)
+                    $("#userLogin").attr("disabled", false);
                 }
             },
             error : function (error) {

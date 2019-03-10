@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d96db9f5-73d1-43bc-ba3d-9fbaacd346ec" name="Default" comment="htaccess">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Manage/Controller/ResumeController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage/Controller/IndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Manage/Controller/IndexController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage/Controller/PublicController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Manage/Controller/PublicController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage/View/Index/editPhone.html" beforeDir="false" afterPath="$PROJECT_DIR$/Manage/View/Index/editPhone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage/View/Index/editPwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/Manage/View/Index/editPwd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage/View/Index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Manage/View/Index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage/View/Public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Manage/View/Public/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Runtime/Cache/Manage/1205fb00c31903448aebabdb1c5d629c.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Manage/1205fb00c31903448aebabdb1c5d629c.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Runtime/Cache/Manage/740160aba848558a267a6e0f1190a134.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Manage/740160aba848558a267a6e0f1190a134.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Runtime/Logs/Manage/19_03_10.log" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Logs/Manage/19_03_10.log" afterDir="false" />
@@ -31,8 +23,8 @@
       <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Manage/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="-8">
+              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -211,12 +203,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552205175172</updated>
-      <workItem from="1552205176308" duration="6075000" />
+      <workItem from="1552205176308" duration="6355000" />
     </task>
+    <task id="LOCAL-00001" summary="htaccess">
+      <created>1552219413401</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552219413401</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6075000" />
+    <option name="totallyTimeSpent" value="6355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -354,8 +354,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manage/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="-8">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
         </state>
       </provider>
     </entry>

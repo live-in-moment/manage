@@ -106,16 +106,27 @@
 <aside class="Hui-aside">
     <div class="menu_dropdown bk_2">
         <dl id="resume-module">
-            <dt><i class="Hui-iconfont">&#xe616;</i> 简历管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dt><i class="Hui-iconfont">&#xe616;</i> 部门内部管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
                     <li>
-                        <a href="javascript:;" data-href="/Manage/resume/showBusinessList" data-title="简历管理">未处理简历管理</a>
+                        <a href="javascript:;" data-href="/Manage/resume/resumeIndex" data-title="简历列表">面试列表</a>
                     </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="hr-module">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 人力管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
                     <li>
-                        <span class="myToggle" data-title="销货管理" href="javascript:;">销货管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></span>
+                        <span class="myToggle" data-title="简历管理" href="javascript:;">简历管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></span>
                         <ul style="display: none;">
-                            <li><a data-href="/Manage/Customer/showContract" href="javascript:;" data-title="销售合同">销售合同</a></li>
+                            <li><a data-href="/Manage/HrManage/showContract" href="javascript:;" data-title="简历筛选">简历筛选</a></li>
+                            <li><a data-href="/Manage/HrManage/showContract" href="javascript:;" data-title="储备简历库">储备简历库</a></li>
+                            <li><a data-href="/Manage/HrManage/showContract" href="javascript:;" data-title="不合格简历">不合格简历</a></li>
+                            <li><a data-href="/Manage/HrManage/showContract" href="javascript:;" data-title="面试失败列表">面试失败列表</a></li>
+                            <li><a data-href="/Manage/HrManage/showContract" href="javascript:;" data-title="HR面试">HR面试</a></li>
                         </ul>
                     </li>
                 </ul>
